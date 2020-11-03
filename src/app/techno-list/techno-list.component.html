@@ -1,3 +1,6 @@
 <h3>Toutes les technos</h3>
 
-{{ allTechnos | json }}
+<div *ngFor="let techno of allTechnos">
+  <h4>{{ techno.technoname }}</h4>
+  <div>{{ techno.category }} - {{ techno.details }}</div>
+</div>
