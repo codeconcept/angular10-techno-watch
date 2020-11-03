@@ -1,5 +1,5 @@
 <h3>Toutes les technos</h3>
 
 <div *ngFor="let techno of allTechnos">
-  <app-techno-details [tech]="techno"></app-techno-details>
+  <app-techno-details [tech]="techno" (deleteTech)="deleteTechno($event)"></app-techno-details>
 </div>

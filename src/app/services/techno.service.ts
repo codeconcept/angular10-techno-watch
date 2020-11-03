@@ -18,4 +18,9 @@ export class TechnoService {
   getTechnos(): Technology[] {
     return this.technos;
   }
+
+  deleteTechno(tech: Technology) {
+    this.technos = this.technos.filter(t => t.id !== tech.id);
+    return this.technos;
+  }
 }

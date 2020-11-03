@@ -1,16 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Technology } from '../models/Technology';
 
 @Component({
   selector: 'app-techno-details',
   templateUrl: './techno-details.component.html',
-  styleUrls: ['./techno-details.component.css']
+  styleUrls: ['./techno-details.component.css'],
 })
 export class TechnoDetailsComponent implements OnInit {
   @Input() tech: Technology;
-  constructor() { }
+  @Output() deleteTech = new EventEmitter<Technology>();
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  delete(tech: Technology) {
+    this.deleteTech.emit(tech);
   }
-
 }
