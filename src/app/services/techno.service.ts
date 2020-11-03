@@ -9,7 +9,8 @@ export class TechnoService {
   constructor() {}
 
   createTechno(techno) {
-    this.technos = [techno, ...this.technos];
+    const newTechno = { id: Date.now(), ...techno };
+    this.technos = [newTechno, ...this.technos];
     console.log(this.technos);
   }
 
