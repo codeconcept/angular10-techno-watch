@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TechnoAddComponent } from './techno-add/techno-add.component';
 import { HomeComponent } from './home/home.component';
 import { TechnoListComponent } from './techno-list/techno-list.component';
+import { TechnoDetailsComponent } from './techno-details/techno-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TechnoAddComponent,
     HomeComponent,
-    TechnoListComponent
+    TechnoListComponent,
+    TechnoDetailsComponent
   ],
   imports: [
     BrowserModule,
